@@ -13,4 +13,8 @@ RUN apt-get install traceroute
 RUN pip install --no-cache-dir geopandas
 RUN pip install --no-cache-dir babypandas
 
+COPY /run_jupyter.sh /
+
 USER $NB_UID
+
+CMD ["/bin/bash"]
